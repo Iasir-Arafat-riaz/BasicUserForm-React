@@ -1,8 +1,10 @@
 import React from 'react';
 
 const FormOutput = (props) => {
+
   const{emailAddress,userName,firstName,lastName,residence,education}=props?.userInfo;
   const{setCount,count,setUserInfo}=props;
+  
   return (
     <div>
       <div className='form-output'>

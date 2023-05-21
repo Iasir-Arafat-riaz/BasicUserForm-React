@@ -1,9 +1,11 @@
 import React from "react";
 
 const SignUpTwo = ({ setUserInfo, userInfo, setCount, count }) => {
+
   const secondPageInfo = (e) => {
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
+  
   return (
     <div>
       <h2 className="text-center">Sign Up</h2>
