@@ -1,11 +1,14 @@
 import React from "react";
 
-const SignUpTwo = ({ setUserInfo, userInfo, setCount, count }) => {
-
+const SignUpTwo = ({
+   setUserInfo,
+   userInfo,
+   setCount,
+  }) => {
   const secondPageInfo = (e) => {
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
-  
+
   return (
     <div>
       <h2 className="text-center">Sign Up</h2>
@@ -42,10 +45,16 @@ const SignUpTwo = ({ setUserInfo, userInfo, setCount, count }) => {
         defaultValue={userInfo?.education}
       />
       <br />
-      <button className="button-left" onClick={() => setCount(count - 1)}>
+      <button
+        className="button-left"
+        onClick={() => setCount((previous) => previous - 1)}
+      >
         Previous
       </button>
-      <button className="button-right" onClick={() => setCount(count + 1)}>
+      <button
+        className="button-right"
+        onClick={() => setCount((previous) => previous + 1)}
+      >
         Next
       </button>
     </div>

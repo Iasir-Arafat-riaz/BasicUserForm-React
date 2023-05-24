@@ -3,7 +3,7 @@ import React from 'react';
 const FormOutput = (props) => {
 
   const{emailAddress,userName,firstName,lastName,residence,education}=props?.userInfo;
-  const{setCount,count,setUserInfo}=props;
+  const{setCount,setUserInfo}=props;
   
   return (
     <div>
@@ -21,8 +21,8 @@ const FormOutput = (props) => {
       <h5>Level of Education</h5>
       <div>{education}</div>
       </div>
-      <button className="button-left" onClick={()=>setCount(count-1)}>Previous</button>
-      <button className="button-right" onClick={()=>{setCount(count+1); setUserInfo({}) }}>Confirm & Continue</button>
+      <button className="button-left" onClick={()=>setCount(previous=>previous-1)}>Previous</button>
+      <button className="button-right" onClick={()=>{setCount(previous=>previous+1); setUserInfo({}) }}>Confirm & Continue</button>
     </div>
   );
 };
