@@ -1,10 +1,10 @@
 import React from "react";
 
 const SignUpTwo = ({
-   setUserInfo,
-   userInfo,
-   setCount,
-  }) => {
+  setUserInfo,
+  userInfo,
+  setCount,
+}) => {
   const secondPageInfo = (e) => {
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };

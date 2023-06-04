@@ -1,15 +1,15 @@
 import React from "react";
 
-const SignUpOne = ({ 
+const SignUpOne = ({
   setUserInfo,
   userInfo,
-  setCount 
- }) => {
+  setCount
+}) => {
 
   const firstPageInfo = (e) => {
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
-  
+
   return (
     <div>
       <h2 className="text-center">Sign Up</h2>
@@ -37,7 +37,7 @@ const SignUpOne = ({
         defaultValue={userInfo.password}
       />
       <br />
-      <button onClick={()=>setCount(previous=>previous+1)}>Next</button>
+      <button onClick={() => setCount(preveious => preveious + 1)}>Next</button>
     </div>
   );
 };
